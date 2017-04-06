@@ -8,3 +8,6 @@ It's ugly, some dtrace scripts may return values lower or higher than the actual
 
 Use at your own risk, and don't run this 24/7, it's meant as an adhoc tool.
 
+## Installation
+
+You'll want to replace *CHANGE_ME* in all files with the hostname of the server where it's installed.
