@@ -6,21 +6,21 @@
 #pragma D option cleanrate=333hz
 
 io:::done
-/args[1]->dev_statname=="sd9"/
+/args[1]->dev_name=="sd"/
 {
         @iosize["size"] = sum(args[0]->b_bcount);
         start[arg0] = 0;
 }
 
 io:::done
-/args[1]->dev_statname=="sd9" && args[0]->b_flags & B_READ/
+/args[1]->dev_name=="sd" && args[0]->b_flags & B_READ/
 {
         @riosize["rsize"] = sum(args[0]->b_bcount);
         start[arg0] = 0;
 }
 
 io:::done
-/args[1]->dev_statname=="sd9" && args[0]->b_flags & B_WRITE/
+/args[1]->dev_name=="sd" && args[0]->b_flags & B_WRITE/
 {
         @wiosize["wsize"] = sum(args[0]->b_bcount);
         start[arg0] = 0;

@@ -6,7 +6,7 @@
 #pragma D option cleanrate=333hz
 
 io:::start
-/args[1]->dev_statname=="sd9"/
+/args[1]->dev_name=="ssd"/
 {
 /*       printf("dev=%s + %s + %s\n", args[1]->dev_name,  args[1]->dev_statname ,  args[1]->dev_pathname); */
         start[arg0] = timestamp;
